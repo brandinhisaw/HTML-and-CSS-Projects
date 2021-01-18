@@ -1,2 +1,2 @@
 # HTML-and-CSS-Projects
-Projects related to The Tech Academy bootcamp, HTML and CSS
+Store projects related to The Tech Academy bootcamp HTML5 and CSS3 course.

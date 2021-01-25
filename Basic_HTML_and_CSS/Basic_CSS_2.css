@@ -1,7 +1,8 @@
 p {
 	color: white;
 	background: grey;
+	font-size: large;
 	font-weight: bold;
 	text-align: center;
-	text-size: large;
+	text-shadow: 3px 3px black;
 }

@@ -1,0 +1,25 @@
+/* GENERAL STYLE */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+/* GALLERY STYLE */
+.photo-container img{
+    width: 290px;
+    height: 180px;
+}
+
+
+/* CONTACT FORM STYLE */
+.contact_inputs {
+    width: 70%;
+}
+
+.contact_inputs input[type=text] {
+    width: 50%;
+    margin: 12px 12px;
+    border: 2px solid #343434;
+    border-radius: 7px;
+}

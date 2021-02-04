@@ -1,0 +1,123 @@
+/* GENERAL STYLE */
+footer {
+    font-weight: bold;
+    text-align: center;
+}
+
+body p:hover {
+    color: cadetblue;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* NAVBAR STYLE */
+.navbar {
+    overflow: hidden;
+    background-color: #3f3f3f;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #3e3e3e;
+    color: silver;
+}
+
+/* COLUMN STYLE */
+.column {
+    float: left;
+    width: 45%;
+    height: 300px;
+    margin: 20px;
+    border: 2px solid blue;
+    color: red;
+    background-color: slategray;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* VIDEO STYLE */
+video {
+    padding-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 56.5%;
+    height: 600px;
+}
+
+.vidtext {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* IMAGE STLYE */
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.image {
+    border: 2px solid blue;
+    border-radius: 10px;
+    display: block;
+    filter: saturate(50%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 40%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+    opacity: 0;
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* TABLE STYLE */
+table {
+    border: 2px solid black;
+}
+
+td {
+    padding: 50px;
+}
+
+.top {
+    background-color: blue;
+}

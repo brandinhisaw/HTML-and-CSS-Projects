@@ -1,0 +1,279 @@
+/* == GENERAL STYLE == */
+body {
+    margin: 0%; /* Displays content to the edges of the browser */
+}
+
+h1 {
+    text-transform: initial;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 1%;
+    color: #2b2b2b;
+}
+
+.white-text {
+    color: white;
+}
+
+p {
+    font-family: Garamond, Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
+q {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transform: scale(1.01);
+    transition: filter 1s;
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+footer {
+    padding: 0.5%;
+    background-color: black;
+    color: white;
+}
+
+
+/* == NAVBAR STYLE == */
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 1.5s;
+    animation: moveNav 1.5s;
+}
+
+/* Navbar Animation */
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left:0vw;}
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Avant Garde, Helvetica;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 2.5s;
+    animation: moveNavText 2.5s;
+}
+
+/* Navbar Text Animation */
+@keyframes moveNavText {
+    from{top: -100vw;}
+    to{top:0vw;}
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar a {
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+.Navbar a:hover {
+    background-color: #F4F4F4;
+    color: black;
+    font-weight: bold;
+}
+
+.Navbar a.active {
+    font-weight: bold;
+}
+
+
+/* == VIDEO STYLE == */
+#Background_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+    #Background_Video {
+        display: none;
+    }
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 2.75s;
+    animation: moveVideoText 2.75s;
+}
+
+/* Video Animation */
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* == TABLE STYLE == */
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: #fff;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.Column_1:hover {    
+    background-color: #a7a7a794;  
+}
+
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #4d4d4d;
+}
+
+.Column_tall {
+    padding-top: 3%;
+    height: 450px;
+}
+
+.Row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contact_form {
+    width: 70%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* == FORM STYLE == */
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    word-wrap: break-word;
+    word-break: all;
+    height: 80px;
+    resize: none;
+}
+
+textarea:hover {
+    box-shadow: 0 0 5px #414141 inset;
+}
+
+::placeholder {
+    vertical-align: top;
+    color: gray;
+    font-family: 
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px #414141 inset;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=submit]:hover {
+    background-color: #414141;
+    transform: scale(1.05);
+    transition: transform 1.5s;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-family: "Trebuchet MS", Optima;
+}

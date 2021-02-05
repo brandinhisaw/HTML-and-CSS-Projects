@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width">
+        <title>Brandin Hisaw | Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    </head>
+
+    <body class="Background">
+
+        <!-- NAVIGATION -->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!-- BREAK SPACE BETWEEN NAV AND CONTENT -->
+        <div id="Home"></div>
+        <br>
+        <br>
+
+        <!-- BACKGROUND VIDEO -->
+        <div>
+            <video autoplay muted loop id="Background_Video">
+                <source src="./images/videos/rain.mp4" type="video/mp4">
+                <!-- Message to display if video fails to run -->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- VIDEO TEXT -->
+        <div class="Video_Text">
+            <h1 class="white-text">Brandin's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>I enjoy thinking about ways to create something that other people have not even thought about, something no one has managed to achieve.
+                    </q>
+                    <br> - Shigeru Miyamoto
+                    <br>
+                    <br> Welcome to my portfolio. My name is Brandin Hisaw and I am an aspiring professional Game Developer.
+                    <br>
+                    <br> Thank you for dropping by!
+                </p>
+            </strong>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="Row" id="About">
+            <!-- LEFT COLUMN, IMAGE -->
+            <div class="Column_2">
+                <img src="./images/seattle.jpg" alt="Seattle">
+            </div>
+            <!-- RIGHT COLUMN, TEXT -->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p class="center">
+                    I am an independent game developer who dreams of XR body and peripheral control interactions.
+                    <br>
+                    <br>I am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy's</a> Game Developer Boot Camp where I will expand my knowledge of C# and C++ and pursue a professional career in Game Development.
+                    <br>
+                    <br>I look forward to working with other passionate individuals to shape the future of the game space. 
+                    <br>
+                    <br>Interested in a project or hiring me on? Feel free to <a href='#Contact'>Contact</a> me below.
+                </p>
+            </div>
+        </div>
+
+        <!-- GITHUB -->
+        <div class="Row" id="GitHub">
+            <!-- LEFT COLUMN, TEXT -->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    My current and previous coding projects can be found on my GitHub profile:
+                    <br>
+                    <br><a href="https://github.com/brandinhisaw" target="_blank">Brandin Hisaw | GitHub</a>
+                </p>
+            </div>
+            <!-- RIGHT COLUMN, IMAGE -->
+            <div class="Column_2">
+                <a href="https://github.com/brandinhisaw" target="_blank"><img src="./images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="Row" id="Contact">
+            <!-- LEFT COLUMN, IMAGE -->
+            <div class="Column_2 Column_tall">
+                <img src="./images/contact.jpg" alt="Contact_Image">
+            </div>
+            <!-- RIGHT COLUMN, FORM -->
+            <div class="Column_1 Column_tall">
+                <div class="contact_form">
+                    <h1>Contact</h1>
+                    <!-- FORMSPREE ENDPOINT -->
+                    <form action="https://formspree.io/f/mnqorbqz" method="POST">
+                            <input type="text" placeholder="Name">
+                            <br>
+                            <input type="text" id="Email" name="Email" placeholder="Email">
+                            <br>
+                            <textarea id="Message" name="Message" placeholder="Message"></textarea>
+                            <input type="submit" value="SUBMIT">         
+                    </form> 
+                </div>             
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="center">
+                By Brandin Hisaw
+            </p>
+        </footer>
+    </body>
+</html>

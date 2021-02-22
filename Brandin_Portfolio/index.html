@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Brandin Hisaw | Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+        <script src="js/portfolio.js" defer></script>
     </head>
 
     <body class="Background">
@@ -12,20 +13,19 @@
         <!-- NAVIGATION -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!-- Calls JS function to open or close the form pop-out -->
+            <a onclick="openForm();" ondblclick="closeForm();">Contact</a>
         </div>
 
         <!-- BREAK SPACE BETWEEN NAV AND CONTENT -->
-        <div id="Home"></div>
-        <br>
-        <br>
+        <div id="Home">
 
         <!-- BACKGROUND VIDEO -->
-        <div>
             <video autoplay muted loop id="Background_Video">
-                <source src="./images/videos/rain.mp4" type="video/mp4">
+               <source src="./images/videos/clouds.mp4" type="video/mp4">
                 <!-- Message to display if video fails to run -->
                 Your browser does not support HTML5 video.
             </video>
@@ -33,18 +33,89 @@
 
         <!-- VIDEO TEXT -->
         <div class="Video_Text">
-            <h1 class="white-text">Brandin's Portfolio</h1>
+            <h1 style="color: white;">Brandin's Portfolio</h1>
             <strong>
-                <p class="center">
-                    <q>I enjoy thinking about ways to create something that other people have not even thought about, something no one has managed to achieve.
-                    </q>
-                    <br> - Shigeru Miyamoto
-                    <br>
-                    <br> Welcome to my portfolio. My name is Brandin Hisaw and I am an aspiring professional Game Developer.
-                    <br>
-                    <br> Thank you for dropping by!
+                <p>
+                    <strong>
+                        <center>
+                            <q>I enjoy thinking about ways to create something that other people have not even thought about, something no one has managed to achieve.
+                            </q>
+                            <br> - Shigeru Miyamoto
+                            <br>
+                            <br> Welcome to my portfolio. My name is Brandin Hisaw and I am an aspiring professional Game Developer. 
+                            <br>
+                            <br>Games have played a large part in my life and I have seen the positive impact and influence they have first-hand. 
+                            <br>
+                            <br>I aspire to be a part of the games industry to help make those same experiences for future generations.
+                            <br>
+                            <br> Thank you for dropping by!
+                        </center>
+                    </strong>
                 </p>
             </strong>
+        </div>
+
+        <!-- SLIDESHOW -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="images/together.png" style="width:100%"> <!-- To Be Edited -->
+                        <div class="text">Games bring people and communities together</div> <!-- To Be Edited -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="images/dev.png" style="width:100%"> <!-- To Be Edited -->
+                        <div class="text">I am an independent game developer, looking to work in the professional realm</div> <!-- To Be Edited -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="images/unity.png" style="width:100%"> <!-- To Be Edited -->
+                        <div class="text">Proficient in Unity and trained in C#</div> <!-- To Be Edited -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="images/unreal.png" style="width:100%"> <!-- To Be Edited -->
+                        <div class="text">Trained in C++ and Unreal Engine</div> <!-- To Be Edited -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="images/itchio.png" style="width:100%">
+                        <div class="text">Check out my game jam submissions at <a href="https://hsarus.itch.io/">itch.io</a></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="images/contact.png" style="width:100%"> <!-- To Be Edited -->
+                        <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color:white;">Reach out through the contact form!</a>
+                        </div> <!-- To Be Edited -->
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                </div>
+                <br>
+
+                <div style="text-align: center;">
+
+                <span class="dot" onclick="currentSlide(1);"></span>
+                <span class="dot" onclick="currentSlide(2);"></span>
+                <span class="dot" onclick="currentSlide(3);"></span>
+                <span class="dot" onclick="currentSlide(4);"></span>
+                <span class="dot" onclick="currentSlide(5);"></span>
+                <span class="dot" onclick="currentSlide(6);"></span>
+
+                </div>
+            </div>
         </div>
 
         <!-- ABOUT -->
@@ -56,14 +127,12 @@
             <!-- RIGHT COLUMN, TEXT -->
             <div class="Column_1">
                 <h1>About</h1>
-                <p class="center">
+                <p>
                     I am an independent game developer who dreams of XR body and peripheral control interactions.
                     <br>
                     <br>I am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy's</a> Game Developer Boot Camp where I will expand my knowledge of C# and C++ and pursue a professional career in Game Development.
                     <br>
-                    <br>I look forward to working with other passionate individuals to shape the future of the game space. 
-                    <br>
-                    <br>Interested in a project or hiring me on? Feel free to <a href='#Contact'>Contact</a> me below.
+                    <br>I look forward to working with other passionate individuals to shape the future of the game space. Interested in a project or hiring me on? Feel free to <a href='#Contact'>Contact</a> me below.
                 </p>
             </div>
         </div>
@@ -73,10 +142,9 @@
             <!-- LEFT COLUMN, TEXT -->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p class="center">
+                <p>
                     My current and previous coding projects can be found on my GitHub profile:
-                    <br>
-                    <br><a href="https://github.com/brandinhisaw" target="_blank">Brandin Hisaw | GitHub</a>
+                    <center><a href="https://github.com/brandinhisaw" target="_blank">Brandin Hisaw | GitHub</a></center>
                 </p>
             </div>
             <!-- RIGHT COLUMN, IMAGE -->
@@ -86,32 +154,34 @@
         </div>
 
         <!-- CONTACT -->
-        <div class="Row" id="Contact">
-            <!-- LEFT COLUMN, IMAGE -->
-            <div class="Column_2 Column_tall">
-                <img src="./images/contact.jpg" alt="Contact_Image">
-            </div>
-            <!-- RIGHT COLUMN, FORM -->
-            <div class="Column_1 Column_tall">
-                <div class="contact_form">
-                    <h1>Contact</h1>
+        <div id="Contact">
+            <button onclick="openForm();" class="Pop_Up_Button"> CONTACT </button>
+                <div class="form-popup" id="myForm">                    
                     <!-- FORMSPREE ENDPOINT -->
-                    <form action="https://formspree.io/f/mnqorbqz" method="POST">
-                            <input type="text" placeholder="Name">
-                            <br>
-                            <input type="text" id="Email" name="Email" placeholder="Email">
-                            <br>
-                            <textarea id="Message" name="Message" placeholder="Message"></textarea>
-                            <input type="submit" value="SUBMIT">         
-                    </form> 
-                </div>             
-            </div>
+                    <form action="https://formspree.io/f/mnqorbqz" method="POST" class="form-container">
+
+                    <h1>Contact</h1>
+
+                        <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Type your name here" name="name" required>
+                        <label for="phone"><b>Phone</b></label>
+                            <input type="text" placeholder="Enter your phone number here" name="phone">
+                        <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Type your email address here" name="email" required>
+                        <label for="message"><b>Message</b></label>
+                            <input type="text" placeholder="Type your message here" name="message">
+
+                        <button type="submit" class="btn">SUBMIT</button>
+                        <button type="button" class="btn cancel" onclick="closeForm();">CLOSE</button>
+
+                    </form>
+                </div>
         </div>
 
         <!-- FOOTER -->
         <footer>
-            <p class="center">
-                By Brandin Hisaw
+            <p>
+                <center>By Brandin Hisaw</center>
             </p>
         </footer>
     </body>
